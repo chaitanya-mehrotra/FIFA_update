@@ -1,0 +1,729 @@
+[
+  {
+    "d": "Thu, 11 June 2026",
+    "g": "A",
+    "m": "Mexico vs South Africa",
+    "t": "12:30 AM †",
+    "v": "Mexico City Stadium (Azteca)"
+  },
+  {
+    "d": "Thu, 11 June 2026",
+    "g": "A",
+    "m": "South Korea vs Czechia",
+    "t": "7:30 AM †",
+    "v": "Guadalajara (Akron), Zapopan"
+  },
+  {
+    "d": "Fri, 12 June 2026",
+    "g": "B",
+    "m": "Canada vs Bosnia & Herzegovina",
+    "t": "12:30 AM †",
+    "v": "Toronto (BMO Field)"
+  },
+  {
+    "d": "Fri, 12 June 2026",
+    "g": "D",
+    "m": "USA vs Paraguay",
+    "t": "6:30 AM †",
+    "v": "Los Angeles (SoFi)"
+  },
+  {
+    "d": "Sat, 13 June 2026",
+    "g": "B",
+    "m": "Qatar vs Switzerland",
+    "t": "12:30 AM †",
+    "v": "SF Bay Area (Levi's)"
+  },
+  {
+    "d": "Sat, 13 June 2026",
+    "g": "C",
+    "m": "Brazil vs Morocco",
+    "t": "3:30 AM †",
+    "v": "NY/NJ (MetLife)"
+  },
+  {
+    "d": "Sat, 13 June 2026",
+    "g": "C",
+    "m": "Haiti vs Scotland",
+    "t": "6:30 AM †",
+    "v": "Boston (Gillette)"
+  },
+  {
+    "d": "Sun, 14 June 2026",
+    "g": "D",
+    "m": "Australia vs Türkiye",
+    "t": "9:30 AM",
+    "v": "BC Place, Vancouver"
+  },
+  {
+    "d": "Sun, 14 June 2026",
+    "g": "E",
+    "m": "Germany vs Curaçao",
+    "t": "10:30 PM",
+    "v": "Houston (NRG)"
+  },
+  {
+    "d": "Sun, 14 June 2026",
+    "g": "F",
+    "m": "Netherlands vs Japan",
+    "t": "1:30 AM †",
+    "v": "Dallas (AT&T)"
+  },
+  {
+    "d": "Sun, 14 June 2026",
+    "g": "E",
+    "m": "Ivory Coast vs Ecuador",
+    "t": "4:30 AM †",
+    "v": "Philadelphia (Lincoln Financial)"
+  },
+  {
+    "d": "Sun, 14 June 2026",
+    "g": "F",
+    "m": "Sweden vs Tunisia",
+    "t": "7:30 AM †",
+    "v": "Monterrey (BBVA)"
+  },
+  {
+    "d": "Mon, 15 June 2026",
+    "g": "H",
+    "m": "Spain vs Cape Verde",
+    "t": "9:30 PM",
+    "v": "Atlanta (Mercedes-Benz)"
+  },
+  {
+    "d": "Mon, 15 June 2026",
+    "g": "G",
+    "m": "Belgium vs Egypt",
+    "t": "12:30 AM †",
+    "v": "Seattle (Lumen Field)"
+  },
+  {
+    "d": "Mon, 15 June 2026",
+    "g": "H",
+    "m": "Saudi Arabia vs Uruguay",
+    "t": "3:30 AM †",
+    "v": "Miami (Hard Rock)"
+  },
+  {
+    "d": "Mon, 15 June 2026",
+    "g": "G",
+    "m": "Iran vs New Zealand",
+    "t": "6:30 AM †",
+    "v": "Los Angeles (SoFi)"
+  },
+  {
+    "d": "Tue, 16 June 2026",
+    "g": "I",
+    "m": "France vs Senegal",
+    "t": "12:30 AM †",
+    "v": "NY/NJ (MetLife)"
+  },
+  {
+    "d": "Tue, 16 June 2026",
+    "g": "I",
+    "m": "Iraq vs Norway",
+    "t": "3:30 AM †",
+    "v": "Boston (Gillette)"
+  },
+  {
+    "d": "Tue, 16 June 2026",
+    "g": "J",
+    "m": "Argentina vs Algeria",
+    "t": "6:30 AM †",
+    "v": "Kansas City (Arrowhead)"
+  },
+  {
+    "d": "Wed, 17 June 2026",
+    "g": "J",
+    "m": "Austria vs Jordan",
+    "t": "9:30 AM",
+    "v": "SF Bay Area (Levi's)"
+  },
+  {
+    "d": "Wed, 17 June 2026",
+    "g": "K",
+    "m": "Portugal vs DR Congo",
+    "t": "10:30 PM",
+    "v": "Houston (NRG)"
+  },
+  {
+    "d": "Wed, 17 June 2026",
+    "g": "L",
+    "m": "England vs Croatia",
+    "t": "1:30 AM †",
+    "v": "Dallas (AT&T)"
+  },
+  {
+    "d": "Wed, 17 June 2026",
+    "g": "L",
+    "m": "Ghana vs Panama",
+    "t": "4:30 AM †",
+    "v": "Toronto (BMO Field)"
+  },
+  {
+    "d": "Wed, 17 June 2026",
+    "g": "K",
+    "m": "Uzbekistan vs Colombia",
+    "t": "7:30 AM †",
+    "v": "Mexico City (Azteca)"
+  },
+  {
+    "d": "Thu, 18 June 2026",
+    "g": "A",
+    "m": "Czechia vs South Africa",
+    "t": "9:30 PM",
+    "v": "Atlanta (Mercedes-Benz)"
+  },
+  {
+    "d": "Thu, 18 June 2026",
+    "g": "B",
+    "m": "Switzerland vs Bosnia & Herzegovina",
+    "t": "12:30 AM †",
+    "v": "Los Angeles (SoFi)"
+  },
+  {
+    "d": "Thu, 18 June 2026",
+    "g": "B",
+    "m": "Canada vs Qatar",
+    "t": "3:30 AM †",
+    "v": "BC Place, Vancouver"
+  },
+  {
+    "d": "Thu, 18 June 2026",
+    "g": "A",
+    "m": "Mexico vs South Korea",
+    "t": "6:30 AM †",
+    "v": "Guadalajara (Akron)"
+  },
+  {
+    "d": "Fri, 19 June 2026",
+    "g": "D",
+    "m": "Türkiye vs Paraguay",
+    "t": "9:30 AM",
+    "v": "SF Bay Area (Levi's)"
+  },
+  {
+    "d": "Fri, 19 June 2026",
+    "g": "D",
+    "m": "USA vs Australia",
+    "t": "12:30 AM †",
+    "v": "Seattle (Lumen Field)"
+  },
+  {
+    "d": "Fri, 19 June 2026",
+    "g": "C",
+    "m": "Scotland vs Morocco",
+    "t": "3:30 AM †",
+    "v": "Boston (Gillette)"
+  },
+  {
+    "d": "Fri, 19 June 2026",
+    "g": "C",
+    "m": "Brazil vs Haiti",
+    "t": "6:00 AM †",
+    "v": "Philadelphia (Lincoln Financial)"
+  },
+  {
+    "d": "Sat, 20 June 2026",
+    "g": "F",
+    "m": "Netherlands vs Sweden",
+    "t": "10:30 PM",
+    "v": "Houston (NRG)"
+  },
+  {
+    "d": "Sat, 20 June 2026",
+    "g": "E",
+    "m": "Germany vs Ivory Coast",
+    "t": "1:30 AM †",
+    "v": "Toronto (BMO Field)"
+  },
+  {
+    "d": "Sat, 20 June 2026",
+    "g": "E",
+    "m": "Ecuador vs Curaçao",
+    "t": "5:30 AM †",
+    "v": "Kansas City (Arrowhead)"
+  },
+  {
+    "d": "Sun, 21 June 2026",
+    "g": "F",
+    "m": "Tunisia vs Japan ★",
+    "t": "9:30 AM",
+    "v": "Monterrey (BBVA) — 1000th WC match"
+  },
+  {
+    "d": "Sun, 21 June 2026",
+    "g": "H",
+    "m": "Spain vs Saudi Arabia",
+    "t": "9:30 PM",
+    "v": "Atlanta (Mercedes-Benz)"
+  },
+  {
+    "d": "Sun, 21 June 2026",
+    "g": "G",
+    "m": "Belgium vs Iran",
+    "t": "12:30 AM †",
+    "v": "Los Angeles (SoFi)"
+  },
+  {
+    "d": "Sun, 21 June 2026",
+    "g": "H",
+    "m": "Uruguay vs Cape Verde",
+    "t": "3:30 AM †",
+    "v": "Miami (Hard Rock)"
+  },
+  {
+    "d": "Sun, 21 June 2026",
+    "g": "G",
+    "m": "New Zealand vs Egypt",
+    "t": "6:30 AM †",
+    "v": "BC Place, Vancouver"
+  },
+  {
+    "d": "Mon, 22 June 2026",
+    "g": "J",
+    "m": "Argentina vs Austria",
+    "t": "10:30 PM",
+    "v": "Dallas (AT&T)"
+  },
+  {
+    "d": "Mon, 22 June 2026",
+    "g": "I",
+    "m": "France vs Iraq",
+    "t": "2:30 AM †",
+    "v": "Philadelphia (Lincoln Financial)"
+  },
+  {
+    "d": "Mon, 22 June 2026",
+    "g": "I",
+    "m": "Norway vs Senegal",
+    "t": "5:30 AM †",
+    "v": "NY/NJ (MetLife)"
+  },
+  {
+    "d": "Mon, 22 June 2026",
+    "g": "J",
+    "m": "Jordan vs Algeria",
+    "t": "8:30 AM †",
+    "v": "SF Bay Area (Levi's)"
+  },
+  {
+    "d": "Tue, 23 June 2026",
+    "g": "K",
+    "m": "Portugal vs Uzbekistan",
+    "t": "10:30 PM",
+    "v": "Houston (NRG)"
+  },
+  {
+    "d": "Tue, 23 June 2026",
+    "g": "L",
+    "m": "England vs Ghana",
+    "t": "1:30 AM †",
+    "v": "Boston (Gillette)"
+  },
+  {
+    "d": "Tue, 23 June 2026",
+    "g": "L",
+    "m": "Panama vs Croatia",
+    "t": "4:30 AM †",
+    "v": "Toronto (BMO Field)"
+  },
+  {
+    "d": "Tue, 23 June 2026",
+    "g": "K",
+    "m": "Colombia vs DR Congo",
+    "t": "7:30 AM †",
+    "v": "Guadalajara (Akron)"
+  },
+  {
+    "d": "Wed, 24 June 2026",
+    "g": "B",
+    "m": "Switzerland vs Canada",
+    "t": "12:30 AM †",
+    "v": "BC Place, Vancouver"
+  },
+  {
+    "d": "Wed, 24 June 2026",
+    "g": "B",
+    "m": "Bosnia & Herzegovina vs Qatar",
+    "t": "12:30 AM †",
+    "v": "Seattle (Lumen Field)"
+  },
+  {
+    "d": "Wed, 24 June 2026",
+    "g": "C",
+    "m": "Scotland vs Brazil",
+    "t": "3:30 AM †",
+    "v": "Miami (Hard Rock)"
+  },
+  {
+    "d": "Wed, 24 June 2026",
+    "g": "C",
+    "m": "Morocco vs Haiti",
+    "t": "3:30 AM †",
+    "v": "Atlanta (Mercedes-Benz)"
+  },
+  {
+    "d": "Wed, 24 June 2026",
+    "g": "A",
+    "m": "Czechia vs Mexico",
+    "t": "6:30 AM †",
+    "v": "Mexico City (Azteca)"
+  },
+  {
+    "d": "Wed, 24 June 2026",
+    "g": "A",
+    "m": "South Africa vs South Korea",
+    "t": "6:30 AM †",
+    "v": "Monterrey (BBVA)"
+  },
+  {
+    "d": "Thu, 25 June 2026",
+    "g": "E",
+    "m": "Curaçao vs Ivory Coast",
+    "t": "1:30 AM †",
+    "v": "Philadelphia (Lincoln Financial)"
+  },
+  {
+    "d": "Thu, 25 June 2026",
+    "g": "E",
+    "m": "Ecuador vs Germany",
+    "t": "1:30 AM †",
+    "v": "NY/NJ (MetLife)"
+  },
+  {
+    "d": "Thu, 25 June 2026",
+    "g": "F",
+    "m": "Japan vs Sweden",
+    "t": "4:30 AM †",
+    "v": "Dallas (AT&T)"
+  },
+  {
+    "d": "Thu, 25 June 2026",
+    "g": "F",
+    "m": "Tunisia vs Netherlands",
+    "t": "4:30 AM †",
+    "v": "Kansas City (Arrowhead)"
+  },
+  {
+    "d": "Thu, 25 June 2026",
+    "g": "D",
+    "m": "Türkiye vs USA",
+    "t": "7:30 AM †",
+    "v": "Los Angeles (SoFi)"
+  },
+  {
+    "d": "Thu, 25 June 2026",
+    "g": "D",
+    "m": "Paraguay vs Australia",
+    "t": "7:30 AM †",
+    "v": "SF Bay Area (Levi's)"
+  },
+  {
+    "d": "Fri, 26 June 2026",
+    "g": "I",
+    "m": "Norway vs France",
+    "t": "12:30 AM †",
+    "v": "Boston (Gillette)"
+  },
+  {
+    "d": "Fri, 26 June 2026",
+    "g": "I",
+    "m": "Senegal vs Iraq",
+    "t": "12:30 AM †",
+    "v": "Toronto (BMO Field)"
+  },
+  {
+    "d": "Fri, 26 June 2026",
+    "g": "H",
+    "m": "Cape Verde vs Saudi Arabia",
+    "t": "5:30 AM †",
+    "v": "Houston (NRG)"
+  },
+  {
+    "d": "Fri, 26 June 2026",
+    "g": "H",
+    "m": "Uruguay vs Spain",
+    "t": "5:30 AM †",
+    "v": "Guadalajara (Akron)"
+  },
+  {
+    "d": "Fri, 26 June 2026",
+    "g": "G",
+    "m": "Egypt vs Iran",
+    "t": "8:30 AM †",
+    "v": "Seattle (Lumen Field)"
+  },
+  {
+    "d": "Fri, 26 June 2026",
+    "g": "G",
+    "m": "New Zealand vs Belgium",
+    "t": "8:30 AM †",
+    "v": "BC Place, Vancouver"
+  },
+  {
+    "d": "Sat, 27 June 2026",
+    "g": "L",
+    "m": "Panama vs England",
+    "t": "2:30 AM †",
+    "v": "NY/NJ (MetLife)"
+  },
+  {
+    "d": "Sat, 27 June 2026",
+    "g": "L",
+    "m": "Croatia vs Ghana",
+    "t": "2:30 AM †",
+    "v": "Philadelphia (Lincoln Financial)"
+  },
+  {
+    "d": "Sat, 27 June 2026",
+    "g": "K",
+    "m": "Colombia vs Portugal",
+    "t": "5:00 AM †",
+    "v": "Miami (Hard Rock)"
+  },
+  {
+    "d": "Sat, 27 June 2026",
+    "g": "K",
+    "m": "DR Congo vs Uzbekistan",
+    "t": "5:00 AM †",
+    "v": "Atlanta (Mercedes-Benz)"
+  },
+  {
+    "d": "Sat, 27 June 2026",
+    "g": "J",
+    "m": "Algeria vs Austria",
+    "t": "7:30 AM †",
+    "v": "Kansas City (Arrowhead)"
+  },
+  {
+    "d": "Sat, 27 June 2026",
+    "g": "J",
+    "m": "Jordan vs Argentina",
+    "t": "7:30 AM †",
+    "v": "Dallas (AT&T)"
+  },
+  {
+    "d": "Sun, 28 June 2026",
+    "g": "M73",
+    "m": "2nd Grp A vs 2nd Grp B",
+    "t": "12:30 AM †",
+    "v": "Los Angeles (SoFi)"
+  },
+  {
+    "d": "Mon, 29 June 2026",
+    "g": "M76",
+    "m": "1st Grp C vs 2nd Grp F",
+    "t": "10:30 PM",
+    "v": "Houston (NRG)"
+  },
+  {
+    "d": "Mon, 29 June 2026",
+    "g": "M74",
+    "m": "Germany vs Best 3rd (A/B/C/D/F)",
+    "t": "2:00 AM †",
+    "v": "Boston (Gillette)"
+  },
+  {
+    "d": "Mon, 29 June 2026",
+    "g": "M75",
+    "m": "1st Grp F vs 2nd Grp C",
+    "t": "6:30 AM †",
+    "v": "Monterrey (BBVA)"
+  },
+  {
+    "d": "Tue, 30 June 2026",
+    "g": "M78",
+    "m": "2nd Grp E vs 2nd Grp I",
+    "t": "10:30 PM",
+    "v": "Dallas (AT&T)"
+  },
+  {
+    "d": "Tue, 30 June 2026",
+    "g": "M77",
+    "m": "1st Grp I vs Best 3rd (C/D/F/G/H)",
+    "t": "2:30 AM †",
+    "v": "NY/NJ (MetLife)"
+  },
+  {
+    "d": "Tue, 30 June 2026",
+    "g": "M79",
+    "m": "Mexico vs Best 3rd (C/E/F/H/I)",
+    "t": "6:30 AM †",
+    "v": "Mexico City (Azteca)"
+  },
+  {
+    "d": "Wed, 1 July 2026",
+    "g": "M80",
+    "m": "1st Grp L vs Best 3rd (E/H/I/J/K)",
+    "t": "9:30 PM",
+    "v": "Atlanta (Mercedes-Benz)"
+  },
+  {
+    "d": "Wed, 1 July 2026",
+    "g": "M82",
+    "m": "1st Grp G vs Best 3rd (A/E/H/I/J)",
+    "t": "1:30 AM †",
+    "v": "Seattle (Lumen Field)"
+  },
+  {
+    "d": "Wed, 1 July 2026",
+    "g": "M81",
+    "m": "USA vs Best 3rd (B/E/F/I/J)",
+    "t": "5:30 AM †",
+    "v": "SF Bay Area (Levi's)"
+  },
+  {
+    "d": "Thu, 2 July 2026",
+    "g": "M84",
+    "m": "1st Grp H vs 2nd Grp J",
+    "t": "12:30 AM †",
+    "v": "Los Angeles (SoFi)"
+  },
+  {
+    "d": "Thu, 2 July 2026",
+    "g": "M83",
+    "m": "2nd Grp K vs 2nd Grp L",
+    "t": "4:30 AM †",
+    "v": "Toronto (BMO Field)"
+  },
+  {
+    "d": "Thu, 2 July 2026",
+    "g": "M85",
+    "m": "1st Grp B vs Best 3rd (E/F/G/I/J)",
+    "t": "8:30 AM †",
+    "v": "BC Place, Vancouver"
+  },
+  {
+    "d": "Fri, 3 July 2026",
+    "g": "M88",
+    "m": "2nd Grp D vs 2nd Grp G",
+    "t": "11:30 PM",
+    "v": "Dallas (AT&T)"
+  },
+  {
+    "d": "Fri, 3 July 2026",
+    "g": "M86",
+    "m": "Argentina vs 2nd Grp H",
+    "t": "3:30 AM †",
+    "v": "Miami (Hard Rock)"
+  },
+  {
+    "d": "Fri, 3 July 2026",
+    "g": "M87",
+    "m": "1st Grp K vs Best 3rd (D/E/I/J/L)",
+    "t": "7:00 AM †",
+    "v": "Kansas City (Arrowhead)"
+  },
+  {
+    "d": "Sat, 4 July 2026",
+    "g": "M90",
+    "m": "Winner M73 vs Winner M75",
+    "t": "10:30 PM",
+    "v": "Houston (NRG)"
+  },
+  {
+    "d": "Sat, 4 July 2026",
+    "g": "M89",
+    "m": "Winner M74 vs Winner M77",
+    "t": "2:30 AM †",
+    "v": "Philadelphia (Lincoln Financial)"
+  },
+  {
+    "d": "Sun, 5 July 2026",
+    "g": "M91",
+    "m": "Winner M76 vs Winner M78",
+    "t": "1:30 AM †",
+    "v": "NY/NJ (MetLife)"
+  },
+  {
+    "d": "Sun, 5 July 2026",
+    "g": "M92",
+    "m": "Winner M79 vs Winner M80",
+    "t": "5:30 AM †",
+    "v": "Mexico City (Azteca)"
+  },
+  {
+    "d": "Mon, 6 July 2026",
+    "g": "M93",
+    "m": "Winner M83 vs Winner M84",
+    "t": "12:30 AM †",
+    "v": "Dallas (AT&T)"
+  },
+  {
+    "d": "Mon, 6 July 2026",
+    "g": "M94",
+    "m": "Winner M81 vs Winner M82",
+    "t": "5:30 AM †",
+    "v": "Seattle (Lumen Field)"
+  },
+  {
+    "d": "Tue, 7 July 2026",
+    "g": "M95",
+    "m": "Winner M86 vs Winner M88",
+    "t": "9:30 PM",
+    "v": "Atlanta (Mercedes-Benz)"
+  },
+  {
+    "d": "Tue, 7 July 2026",
+    "g": "M96",
+    "m": "Winner M85 vs Winner M87",
+    "t": "1:30 AM †",
+    "v": "BC Place, Vancouver"
+  },
+  {
+    "d": "Thu, 9 July 2026",
+    "g": "M97",
+    "m": "Winner M89 vs Winner M90",
+    "t": "1:30 AM †",
+    "v": "Boston (Gillette)"
+  },
+  {
+    "d": "Fri, 10 July 2026",
+    "g": "M98",
+    "m": "Winner M93 vs Winner M94",
+    "t": "12:30 AM †",
+    "v": "Los Angeles (SoFi)"
+  },
+  {
+    "d": "Sat, 11 July 2026",
+    "g": "M99",
+    "m": "Winner M91 vs Winner M92",
+    "t": "2:30 AM †",
+    "v": "Miami (Hard Rock)"
+  },
+  {
+    "d": "Sat, 11 July 2026",
+    "g": "M100",
+    "m": "Winner M95 vs Winner M96",
+    "t": "6:30 AM †",
+    "v": "Kansas City (Arrowhead)"
+  },
+  {
+    "d": "Tue, 14 July 2026",
+    "g": "M101",
+    "m": "Winner M97 vs Winner M98",
+    "t": "12:30 AM †",
+    "v": "Dallas (AT&T)"
+  },
+  {
+    "d": "Wed, 15 July 2026",
+    "g": "M102",
+    "m": "Winner M99 vs Winner M100",
+    "t": "12:30 AM †",
+    "v": "Atlanta (Mercedes-Benz)"
+  },
+  {
+    "d": "Sat, 18 July 2026",
+    "g": "M103",
+    "m": "Loser M101 vs Loser M102",
+    "t": "2:30 AM †",
+    "v": "Miami (Hard Rock Stadium)"
+  },
+  {
+    "d": "Sun, 19 July 2026",
+    "g": "MetLife Stadium (NY/NJ), East Rutherford, NJ",
+    "m": "† = Match kicks off the NEXT calendar day in IST | All times converted from US Eastern Time (ET + 9 h 30 min = IST) | ★ Tunisia vs Japan (21 Jun) = 1,000th match in",
+    "t": "FIFA World Cup history | Knockout round matchups TBD once group stage is complete."
+  }
+]
