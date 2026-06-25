@@ -15,6 +15,7 @@ const queryClient = new QueryClient({
 });
 // Pages
 import Home from './pages/Home';
+import Stadiums from './pages/Stadiums';
 import Fixtures from './pages/Fixtures';
 import GroupStage from './pages/GroupStage';
 import KnockoutStage from './pages/KnockoutStage';
@@ -48,6 +49,7 @@ export default function App() {
               <AnimatePresence mode="wait">
                 <Routes>
                   <Route path="/" element={<PageWrapper><Home /></PageWrapper>} />
+                  <Route path="/stadiums" element={<PageWrapper><Stadiums /></PageWrapper>} />
                   <Route path="/fixtures" element={<PageWrapper><Fixtures /></PageWrapper>} />
                   <Route path="/group-stage" element={<PageWrapper><GroupStage /></PageWrapper>} />
                   <Route path="/knockout" element={<PageWrapper><KnockoutStage /></PageWrapper>} />

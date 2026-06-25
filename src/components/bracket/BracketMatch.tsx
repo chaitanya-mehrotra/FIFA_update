@@ -61,7 +61,7 @@ export function BracketMatch({ match, teams, isFinal = false, qual }: BracketMat
     placeholder: string | undefined,
     won: boolean,
     lost: boolean,
-    score: number | null,
+    score: number | null | undefined,
     badge: ReturnType<typeof getBadge>,
     groupName: string
   ) => {

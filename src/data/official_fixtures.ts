@@ -11,7 +11,8 @@ export const officialFixtures: Match[] = [
     "istTime": "00:30",
     "venue": "Mexico City Stadium (Azteca)",
     "stage": "group",
-    "group": "A"
+    "group": "A",
+    "status": "finished"
   },
   {
     "id": 2,
@@ -23,7 +24,8 @@ export const officialFixtures: Match[] = [
     "istTime": "07:30",
     "venue": "Guadalajara (Akron), Zapopan",
     "stage": "group",
-    "group": "A"
+    "group": "A",
+    "status": "finished"
   },
   {
     "id": 3,
@@ -35,7 +37,8 @@ export const officialFixtures: Match[] = [
     "istTime": "00:30",
     "venue": "Toronto (BMO Field)",
     "stage": "group",
-    "group": "B"
+    "group": "B",
+    "status": "finished"
   },
   {
     "id": 4,
@@ -47,7 +50,8 @@ export const officialFixtures: Match[] = [
     "istTime": "06:30",
     "venue": "Los Angeles (SoFi)",
     "stage": "group",
-    "group": "D"
+    "group": "D",
+    "status": "finished"
   },
   {
     "id": 5,
@@ -59,7 +63,8 @@ export const officialFixtures: Match[] = [
     "istTime": "00:30",
     "venue": "SF Bay Area (Levi's)",
     "stage": "group",
-    "group": "B"
+    "group": "B",
+    "status": "finished"
   },
   {
     "id": 6,
@@ -71,7 +76,8 @@ export const officialFixtures: Match[] = [
     "istTime": "03:30",
     "venue": "NY/NJ (MetLife)",
     "stage": "group",
-    "group": "C"
+    "group": "C",
+    "status": "finished"
   },
   {
     "id": 7,
@@ -83,7 +89,8 @@ export const officialFixtures: Match[] = [
     "istTime": "06:30",
     "venue": "Boston (Gillette)",
     "stage": "group",
-    "group": "C"
+    "group": "C",
+    "status": "finished"
   },
   {
     "id": 8,
@@ -95,7 +102,8 @@ export const officialFixtures: Match[] = [
     "istTime": "09:30",
     "venue": "BC Place, Vancouver",
     "stage": "group",
-    "group": "D"
+    "group": "D",
+    "status": "finished"
   },
   {
     "id": 9,
@@ -107,7 +115,8 @@ export const officialFixtures: Match[] = [
     "istTime": "22:30",
     "venue": "Houston (NRG)",
     "stage": "group",
-    "group": "E"
+    "group": "E",
+    "status": "finished"
   },
   {
     "id": 10,
@@ -119,7 +128,8 @@ export const officialFixtures: Match[] = [
     "istTime": "01:30",
     "venue": "Dallas (AT&T)",
     "stage": "group",
-    "group": "F"
+    "group": "F",
+    "status": "finished"
   },
   {
     "id": 11,
@@ -131,7 +141,8 @@ export const officialFixtures: Match[] = [
     "istTime": "04:30",
     "venue": "Philadelphia (Lincoln Financial)",
     "stage": "group",
-    "group": "E"
+    "group": "E",
+    "status": "finished"
   },
   {
     "id": 12,
@@ -143,7 +154,8 @@ export const officialFixtures: Match[] = [
     "istTime": "07:30",
     "venue": "Monterrey (BBVA)",
     "stage": "group",
-    "group": "F"
+    "group": "F",
+    "status": "finished"
   },
   {
     "id": 13,
@@ -155,7 +167,8 @@ export const officialFixtures: Match[] = [
     "istTime": "21:30",
     "venue": "Atlanta (Mercedes-Benz)",
     "stage": "group",
-    "group": "H"
+    "group": "H",
+    "status": "finished"
   },
   {
     "id": 14,
@@ -167,7 +180,8 @@ export const officialFixtures: Match[] = [
     "istTime": "00:30",
     "venue": "Seattle (Lumen Field)",
     "stage": "group",
-    "group": "G"
+    "group": "G",
+    "status": "finished"
   },
   {
     "id": 15,
@@ -179,7 +193,8 @@ export const officialFixtures: Match[] = [
     "istTime": "03:30",
     "venue": "Miami (Hard Rock)",
     "stage": "group",
-    "group": "H"
+    "group": "H",
+    "status": "finished"
   },
   {
     "id": 16,
@@ -191,7 +206,8 @@ export const officialFixtures: Match[] = [
     "istTime": "06:30",
     "venue": "Los Angeles (SoFi)",
     "stage": "group",
-    "group": "G"
+    "group": "G",
+    "status": "finished"
   },
   {
     "id": 17,
@@ -203,7 +219,8 @@ export const officialFixtures: Match[] = [
     "istTime": "00:30",
     "venue": "NY/NJ (MetLife)",
     "stage": "group",
-    "group": "I"
+    "group": "I",
+    "status": "finished"
   },
   {
     "id": 18,
@@ -215,7 +232,8 @@ export const officialFixtures: Match[] = [
     "istTime": "03:30",
     "venue": "Boston (Gillette)",
     "stage": "group",
-    "group": "I"
+    "group": "I",
+    "status": "finished"
   },
   {
     "id": 19,
@@ -227,7 +245,8 @@ export const officialFixtures: Match[] = [
     "istTime": "06:30",
     "venue": "Kansas City (Arrowhead)",
     "stage": "group",
-    "group": "J"
+    "group": "J",
+    "status": "finished"
   },
   {
     "id": 20,
@@ -239,7 +258,8 @@ export const officialFixtures: Match[] = [
     "istTime": "09:30",
     "venue": "SF Bay Area (Levi's)",
     "stage": "group",
-    "group": "J"
+    "group": "J",
+    "status": "finished"
   },
   {
     "id": 21,
@@ -251,7 +271,8 @@ export const officialFixtures: Match[] = [
     "istTime": "22:30",
     "venue": "Houston (NRG)",
     "stage": "group",
-    "group": "K"
+    "group": "K",
+    "status": "finished"
   },
   {
     "id": 22,
@@ -263,7 +284,8 @@ export const officialFixtures: Match[] = [
     "istTime": "01:30",
     "venue": "Dallas (AT&T)",
     "stage": "group",
-    "group": "L"
+    "group": "L",
+    "status": "finished"
   },
   {
     "id": 23,
@@ -275,7 +297,8 @@ export const officialFixtures: Match[] = [
     "istTime": "04:30",
     "venue": "Toronto (BMO Field)",
     "stage": "group",
-    "group": "L"
+    "group": "L",
+    "status": "finished"
   },
   {
     "id": 24,
@@ -287,7 +310,8 @@ export const officialFixtures: Match[] = [
     "istTime": "07:30",
     "venue": "Mexico City (Azteca)",
     "stage": "group",
-    "group": "K"
+    "group": "K",
+    "status": "finished"
   },
   {
     "id": 25,
@@ -299,7 +323,8 @@ export const officialFixtures: Match[] = [
     "istTime": "21:30",
     "venue": "Atlanta (Mercedes-Benz)",
     "stage": "group",
-    "group": "A"
+    "group": "A",
+    "status": "finished"
   },
   {
     "id": 26,
@@ -311,7 +336,8 @@ export const officialFixtures: Match[] = [
     "istTime": "00:30",
     "venue": "Los Angeles (SoFi)",
     "stage": "group",
-    "group": "B"
+    "group": "B",
+    "status": "finished"
   },
   {
     "id": 27,
@@ -323,7 +349,8 @@ export const officialFixtures: Match[] = [
     "istTime": "03:30",
     "venue": "BC Place, Vancouver",
     "stage": "group",
-    "group": "B"
+    "group": "B",
+    "status": "finished"
   },
   {
     "id": 28,
@@ -335,7 +362,8 @@ export const officialFixtures: Match[] = [
     "istTime": "06:30",
     "venue": "Guadalajara (Akron)",
     "stage": "group",
-    "group": "A"
+    "group": "A",
+    "status": "finished"
   },
   {
     "id": 29,
@@ -347,7 +375,8 @@ export const officialFixtures: Match[] = [
     "istTime": "09:30",
     "venue": "SF Bay Area (Levi's)",
     "stage": "group",
-    "group": "D"
+    "group": "D",
+    "status": "finished"
   },
   {
     "id": 30,
@@ -359,7 +388,8 @@ export const officialFixtures: Match[] = [
     "istTime": "00:30",
     "venue": "Seattle (Lumen Field)",
     "stage": "group",
-    "group": "D"
+    "group": "D",
+    "status": "finished"
   },
   {
     "id": 31,
@@ -371,7 +401,8 @@ export const officialFixtures: Match[] = [
     "istTime": "03:30",
     "venue": "Boston (Gillette)",
     "stage": "group",
-    "group": "C"
+    "group": "C",
+    "status": "finished"
   },
   {
     "id": 32,
@@ -383,7 +414,8 @@ export const officialFixtures: Match[] = [
     "istTime": "06:00",
     "venue": "Philadelphia (Lincoln Financial)",
     "stage": "group",
-    "group": "C"
+    "group": "C",
+    "status": "finished"
   },
   {
     "id": 33,
@@ -395,7 +427,8 @@ export const officialFixtures: Match[] = [
     "istTime": "22:30",
     "venue": "Houston (NRG)",
     "stage": "group",
-    "group": "F"
+    "group": "F",
+    "status": "finished"
   },
   {
     "id": 34,
@@ -407,7 +440,8 @@ export const officialFixtures: Match[] = [
     "istTime": "01:30",
     "venue": "Toronto (BMO Field)",
     "stage": "group",
-    "group": "E"
+    "group": "E",
+    "status": "finished"
   },
   {
     "id": 35,
@@ -419,7 +453,8 @@ export const officialFixtures: Match[] = [
     "istTime": "05:30",
     "venue": "Kansas City (Arrowhead)",
     "stage": "group",
-    "group": "E"
+    "group": "E",
+    "status": "finished"
   },
   {
     "id": 36,
@@ -432,7 +467,8 @@ export const officialFixtures: Match[] = [
     "istTime": "09:30",
     "venue": "Monterrey (BBVA) — 1000th WC match",
     "stage": "group",
-    "group": "F"
+    "group": "F",
+    "status": "finished"
   },
   {
     "id": 37,
@@ -444,7 +480,8 @@ export const officialFixtures: Match[] = [
     "istTime": "21:30",
     "venue": "Atlanta (Mercedes-Benz)",
     "stage": "group",
-    "group": "H"
+    "group": "H",
+    "status": "finished"
   },
   {
     "id": 38,
@@ -456,7 +493,8 @@ export const officialFixtures: Match[] = [
     "istTime": "00:30",
     "venue": "Los Angeles (SoFi)",
     "stage": "group",
-    "group": "G"
+    "group": "G",
+    "status": "finished"
   },
   {
     "id": 39,
@@ -468,7 +506,8 @@ export const officialFixtures: Match[] = [
     "istTime": "03:30",
     "venue": "Miami (Hard Rock)",
     "stage": "group",
-    "group": "H"
+    "group": "H",
+    "status": "finished"
   },
   {
     "id": 40,
@@ -480,7 +519,8 @@ export const officialFixtures: Match[] = [
     "istTime": "06:30",
     "venue": "BC Place, Vancouver",
     "stage": "group",
-    "group": "G"
+    "group": "G",
+    "status": "finished"
   },
   {
     "id": 41,
@@ -492,7 +532,8 @@ export const officialFixtures: Match[] = [
     "istTime": "22:30",
     "venue": "Dallas (AT&T)",
     "stage": "group",
-    "group": "J"
+    "group": "J",
+    "status": "finished"
   },
   {
     "id": 42,
@@ -504,7 +545,8 @@ export const officialFixtures: Match[] = [
     "istTime": "02:30",
     "venue": "Philadelphia (Lincoln Financial)",
     "stage": "group",
-    "group": "I"
+    "group": "I",
+    "status": "finished"
   },
   {
     "id": 43,
@@ -516,7 +558,8 @@ export const officialFixtures: Match[] = [
     "istTime": "05:30",
     "venue": "NY/NJ (MetLife)",
     "stage": "group",
-    "group": "I"
+    "group": "I",
+    "status": "finished"
   },
   {
     "id": 44,
@@ -528,7 +571,8 @@ export const officialFixtures: Match[] = [
     "istTime": "08:30",
     "venue": "SF Bay Area (Levi's)",
     "stage": "group",
-    "group": "J"
+    "group": "J",
+    "status": "finished"
   },
   {
     "id": 45,
@@ -540,7 +584,8 @@ export const officialFixtures: Match[] = [
     "istTime": "22:30",
     "venue": "Houston (NRG)",
     "stage": "group",
-    "group": "K"
+    "group": "K",
+    "status": "finished"
   },
   {
     "id": 46,
@@ -552,7 +597,8 @@ export const officialFixtures: Match[] = [
     "istTime": "01:30",
     "venue": "Boston (Gillette)",
     "stage": "group",
-    "group": "L"
+    "group": "L",
+    "status": "finished"
   },
   {
     "id": 47,
@@ -564,7 +610,8 @@ export const officialFixtures: Match[] = [
     "istTime": "04:30",
     "venue": "Toronto (BMO Field)",
     "stage": "group",
-    "group": "L"
+    "group": "L",
+    "status": "finished"
   },
   {
     "id": 48,
@@ -576,7 +623,8 @@ export const officialFixtures: Match[] = [
     "istTime": "07:30",
     "venue": "Guadalajara (Akron)",
     "stage": "group",
-    "group": "K"
+    "group": "K",
+    "status": "finished"
   },
   {
     "id": 49,
@@ -588,7 +636,8 @@ export const officialFixtures: Match[] = [
     "istTime": "00:30",
     "venue": "BC Place, Vancouver",
     "stage": "group",
-    "group": "B"
+    "group": "B",
+    "status": "finished"
   },
   {
     "id": 50,
@@ -600,7 +649,8 @@ export const officialFixtures: Match[] = [
     "istTime": "00:30",
     "venue": "Seattle (Lumen Field)",
     "stage": "group",
-    "group": "B"
+    "group": "B",
+    "status": "finished"
   },
   {
     "id": 51,
@@ -612,7 +662,8 @@ export const officialFixtures: Match[] = [
     "istTime": "03:30",
     "venue": "Miami (Hard Rock)",
     "stage": "group",
-    "group": "C"
+    "group": "C",
+    "status": "finished"
   },
   {
     "id": 52,
@@ -624,7 +675,8 @@ export const officialFixtures: Match[] = [
     "istTime": "03:30",
     "venue": "Atlanta (Mercedes-Benz)",
     "stage": "group",
-    "group": "C"
+    "group": "C",
+    "status": "finished"
   },
   {
     "id": 53,
@@ -636,7 +688,8 @@ export const officialFixtures: Match[] = [
     "istTime": "06:30",
     "venue": "Mexico City (Azteca)",
     "stage": "group",
-    "group": "A"
+    "group": "A",
+    "status": "finished"
   },
   {
     "id": 54,
@@ -648,7 +701,8 @@ export const officialFixtures: Match[] = [
     "istTime": "06:30",
     "venue": "Monterrey (BBVA)",
     "stage": "group",
-    "group": "A"
+    "group": "A",
+    "status": "finished"
   },
   {
     "id": 55,
@@ -660,7 +714,8 @@ export const officialFixtures: Match[] = [
     "istTime": "01:30",
     "venue": "Philadelphia (Lincoln Financial)",
     "stage": "group",
-    "group": "E"
+    "group": "E",
+    "status": "upcoming"
   },
   {
     "id": 56,
@@ -672,7 +727,8 @@ export const officialFixtures: Match[] = [
     "istTime": "01:30",
     "venue": "NY/NJ (MetLife)",
     "stage": "group",
-    "group": "E"
+    "group": "E",
+    "status": "upcoming"
   },
   {
     "id": 57,
@@ -684,7 +740,8 @@ export const officialFixtures: Match[] = [
     "istTime": "04:30",
     "venue": "Dallas (AT&T)",
     "stage": "group",
-    "group": "F"
+    "group": "F",
+    "status": "upcoming"
   },
   {
     "id": 58,
@@ -696,7 +753,8 @@ export const officialFixtures: Match[] = [
     "istTime": "04:30",
     "venue": "Kansas City (Arrowhead)",
     "stage": "group",
-    "group": "F"
+    "group": "F",
+    "status": "upcoming"
   },
   {
     "id": 59,
@@ -708,7 +766,8 @@ export const officialFixtures: Match[] = [
     "istTime": "07:30",
     "venue": "Los Angeles (SoFi)",
     "stage": "group",
-    "group": "D"
+    "group": "D",
+    "status": "upcoming"
   },
   {
     "id": 60,
@@ -720,7 +779,8 @@ export const officialFixtures: Match[] = [
     "istTime": "07:30",
     "venue": "SF Bay Area (Levi's)",
     "stage": "group",
-    "group": "D"
+    "group": "D",
+    "status": "upcoming"
   },
   {
     "id": 61,
@@ -732,7 +792,8 @@ export const officialFixtures: Match[] = [
     "istTime": "00:30",
     "venue": "Boston (Gillette)",
     "stage": "group",
-    "group": "I"
+    "group": "I",
+    "status": "upcoming"
   },
   {
     "id": 62,
@@ -744,7 +805,8 @@ export const officialFixtures: Match[] = [
     "istTime": "00:30",
     "venue": "Toronto (BMO Field)",
     "stage": "group",
-    "group": "I"
+    "group": "I",
+    "status": "upcoming"
   },
   {
     "id": 63,
@@ -756,7 +818,8 @@ export const officialFixtures: Match[] = [
     "istTime": "05:30",
     "venue": "Houston (NRG)",
     "stage": "group",
-    "group": "H"
+    "group": "H",
+    "status": "upcoming"
   },
   {
     "id": 64,
@@ -768,7 +831,8 @@ export const officialFixtures: Match[] = [
     "istTime": "05:30",
     "venue": "Guadalajara (Akron)",
     "stage": "group",
-    "group": "H"
+    "group": "H",
+    "status": "upcoming"
   },
   {
     "id": 65,
@@ -780,7 +844,8 @@ export const officialFixtures: Match[] = [
     "istTime": "08:30",
     "venue": "Seattle (Lumen Field)",
     "stage": "group",
-    "group": "G"
+    "group": "G",
+    "status": "upcoming"
   },
   {
     "id": 66,
@@ -792,7 +857,8 @@ export const officialFixtures: Match[] = [
     "istTime": "08:30",
     "venue": "BC Place, Vancouver",
     "stage": "group",
-    "group": "G"
+    "group": "G",
+    "status": "upcoming"
   },
   {
     "id": 67,
@@ -804,7 +870,8 @@ export const officialFixtures: Match[] = [
     "istTime": "02:30",
     "venue": "NY/NJ (MetLife)",
     "stage": "group",
-    "group": "L"
+    "group": "L",
+    "status": "upcoming"
   },
   {
     "id": 68,
@@ -816,7 +883,8 @@ export const officialFixtures: Match[] = [
     "istTime": "02:30",
     "venue": "Philadelphia (Lincoln Financial)",
     "stage": "group",
-    "group": "L"
+    "group": "L",
+    "status": "upcoming"
   },
   {
     "id": 69,
@@ -828,7 +896,8 @@ export const officialFixtures: Match[] = [
     "istTime": "05:00",
     "venue": "Miami (Hard Rock)",
     "stage": "group",
-    "group": "K"
+    "group": "K",
+    "status": "upcoming"
   },
   {
     "id": 70,
@@ -840,7 +909,8 @@ export const officialFixtures: Match[] = [
     "istTime": "05:00",
     "venue": "Atlanta (Mercedes-Benz)",
     "stage": "group",
-    "group": "K"
+    "group": "K",
+    "status": "upcoming"
   },
   {
     "id": 71,
@@ -852,7 +922,8 @@ export const officialFixtures: Match[] = [
     "istTime": "07:30",
     "venue": "Kansas City (Arrowhead)",
     "stage": "group",
-    "group": "J"
+    "group": "J",
+    "status": "upcoming"
   },
   {
     "id": 72,
@@ -864,7 +935,8 @@ export const officialFixtures: Match[] = [
     "istTime": "07:30",
     "venue": "Dallas (AT&T)",
     "stage": "group",
-    "group": "J"
+    "group": "J",
+    "status": "upcoming"
   },
   {
     "id": 73,
@@ -877,7 +949,8 @@ export const officialFixtures: Match[] = [
     "utcTime": "19:00",
     "istTime": "00:30",
     "venue": "Los Angeles (SoFi)",
-    "stage": "round_of_32"
+    "stage": "round_of_32",
+    "status": "upcoming"
   },
   {
     "id": 74,
@@ -890,7 +963,8 @@ export const officialFixtures: Match[] = [
     "utcTime": "17:00",
     "istTime": "22:30",
     "venue": "Houston (NRG)",
-    "stage": "round_of_32"
+    "stage": "round_of_32",
+    "status": "upcoming"
   },
   {
     "id": 75,
@@ -902,7 +976,8 @@ export const officialFixtures: Match[] = [
     "utcTime": "20:30",
     "istTime": "02:00",
     "venue": "Boston (Gillette)",
-    "stage": "round_of_32"
+    "stage": "round_of_32",
+    "status": "upcoming"
   },
   {
     "id": 76,
@@ -915,7 +990,8 @@ export const officialFixtures: Match[] = [
     "utcTime": "01:00",
     "istTime": "06:30",
     "venue": "Monterrey (BBVA)",
-    "stage": "round_of_32"
+    "stage": "round_of_32",
+    "status": "upcoming"
   },
   {
     "id": 77,
@@ -928,7 +1004,8 @@ export const officialFixtures: Match[] = [
     "utcTime": "17:00",
     "istTime": "22:30",
     "venue": "Dallas (AT&T)",
-    "stage": "round_of_32"
+    "stage": "round_of_32",
+    "status": "upcoming"
   },
   {
     "id": 78,
@@ -941,7 +1018,8 @@ export const officialFixtures: Match[] = [
     "utcTime": "21:00",
     "istTime": "02:30",
     "venue": "NY/NJ (MetLife)",
-    "stage": "round_of_32"
+    "stage": "round_of_32",
+    "status": "upcoming"
   },
   {
     "id": 79,
@@ -953,7 +1031,8 @@ export const officialFixtures: Match[] = [
     "utcTime": "01:00",
     "istTime": "06:30",
     "venue": "Mexico City (Azteca)",
-    "stage": "round_of_32"
+    "stage": "round_of_32",
+    "status": "upcoming"
   },
   {
     "id": 80,
@@ -966,7 +1045,8 @@ export const officialFixtures: Match[] = [
     "utcTime": "16:00",
     "istTime": "21:30",
     "venue": "Atlanta (Mercedes-Benz)",
-    "stage": "round_of_32"
+    "stage": "round_of_32",
+    "status": "upcoming"
   },
   {
     "id": 81,
@@ -979,7 +1059,8 @@ export const officialFixtures: Match[] = [
     "utcTime": "20:00",
     "istTime": "01:30",
     "venue": "Seattle (Lumen Field)",
-    "stage": "round_of_32"
+    "stage": "round_of_32",
+    "status": "upcoming"
   },
   {
     "id": 82,
@@ -991,7 +1072,8 @@ export const officialFixtures: Match[] = [
     "utcTime": "00:00",
     "istTime": "05:30",
     "venue": "SF Bay Area (Levi's)",
-    "stage": "round_of_32"
+    "stage": "round_of_32",
+    "status": "upcoming"
   },
   {
     "id": 83,
@@ -1004,7 +1086,8 @@ export const officialFixtures: Match[] = [
     "utcTime": "19:00",
     "istTime": "00:30",
     "venue": "Los Angeles (SoFi)",
-    "stage": "round_of_32"
+    "stage": "round_of_32",
+    "status": "upcoming"
   },
   {
     "id": 84,
@@ -1017,7 +1100,8 @@ export const officialFixtures: Match[] = [
     "utcTime": "23:00",
     "istTime": "04:30",
     "venue": "Toronto (BMO Field)",
-    "stage": "round_of_32"
+    "stage": "round_of_32",
+    "status": "upcoming"
   },
   {
     "id": 85,
@@ -1030,7 +1114,8 @@ export const officialFixtures: Match[] = [
     "utcTime": "03:00",
     "istTime": "08:30",
     "venue": "BC Place, Vancouver",
-    "stage": "round_of_32"
+    "stage": "round_of_32",
+    "status": "upcoming"
   },
   {
     "id": 86,
@@ -1043,7 +1128,8 @@ export const officialFixtures: Match[] = [
     "utcTime": "18:00",
     "istTime": "23:30",
     "venue": "Dallas (AT&T)",
-    "stage": "round_of_32"
+    "stage": "round_of_32",
+    "status": "upcoming"
   },
   {
     "id": 87,
@@ -1055,7 +1141,8 @@ export const officialFixtures: Match[] = [
     "utcTime": "22:00",
     "istTime": "03:30",
     "venue": "Miami (Hard Rock)",
-    "stage": "round_of_32"
+    "stage": "round_of_32",
+    "status": "upcoming"
   },
   {
     "id": 88,
@@ -1068,7 +1155,8 @@ export const officialFixtures: Match[] = [
     "utcTime": "01:30",
     "istTime": "07:00",
     "venue": "Kansas City (Arrowhead)",
-    "stage": "round_of_32"
+    "stage": "round_of_32",
+    "status": "upcoming"
   },
   {
     "id": 89,
@@ -1081,7 +1169,8 @@ export const officialFixtures: Match[] = [
     "utcTime": "17:00",
     "istTime": "22:30",
     "venue": "Houston (NRG)",
-    "stage": "round_of_16"
+    "stage": "round_of_16",
+    "status": "upcoming"
   },
   {
     "id": 90,
@@ -1094,7 +1183,8 @@ export const officialFixtures: Match[] = [
     "utcTime": "21:00",
     "istTime": "02:30",
     "venue": "Philadelphia (Lincoln Financial)",
-    "stage": "round_of_16"
+    "stage": "round_of_16",
+    "status": "upcoming"
   },
   {
     "id": 91,
@@ -1107,7 +1197,8 @@ export const officialFixtures: Match[] = [
     "utcTime": "20:00",
     "istTime": "01:30",
     "venue": "NY/NJ (MetLife)",
-    "stage": "round_of_16"
+    "stage": "round_of_16",
+    "status": "upcoming"
   },
   {
     "id": 92,
@@ -1120,7 +1211,8 @@ export const officialFixtures: Match[] = [
     "utcTime": "00:00",
     "istTime": "05:30",
     "venue": "Mexico City (Azteca)",
-    "stage": "round_of_16"
+    "stage": "round_of_16",
+    "status": "upcoming"
   },
   {
     "id": 93,
@@ -1133,7 +1225,8 @@ export const officialFixtures: Match[] = [
     "utcTime": "19:00",
     "istTime": "00:30",
     "venue": "Dallas (AT&T)",
-    "stage": "round_of_16"
+    "stage": "round_of_16",
+    "status": "upcoming"
   },
   {
     "id": 94,
@@ -1146,7 +1239,8 @@ export const officialFixtures: Match[] = [
     "utcTime": "00:00",
     "istTime": "05:30",
     "venue": "Seattle (Lumen Field)",
-    "stage": "round_of_16"
+    "stage": "round_of_16",
+    "status": "upcoming"
   },
   {
     "id": 95,
@@ -1159,7 +1253,8 @@ export const officialFixtures: Match[] = [
     "utcTime": "16:00",
     "istTime": "21:30",
     "venue": "Atlanta (Mercedes-Benz)",
-    "stage": "round_of_16"
+    "stage": "round_of_16",
+    "status": "upcoming"
   },
   {
     "id": 96,
@@ -1172,7 +1267,8 @@ export const officialFixtures: Match[] = [
     "utcTime": "20:00",
     "istTime": "01:30",
     "venue": "BC Place, Vancouver",
-    "stage": "round_of_16"
+    "stage": "round_of_16",
+    "status": "upcoming"
   },
   {
     "id": 97,
@@ -1185,7 +1281,8 @@ export const officialFixtures: Match[] = [
     "utcTime": "20:00",
     "istTime": "01:30",
     "venue": "Boston (Gillette)",
-    "stage": "quarter_final"
+    "stage": "quarter_final",
+    "status": "upcoming"
   },
   {
     "id": 98,
@@ -1198,7 +1295,8 @@ export const officialFixtures: Match[] = [
     "utcTime": "19:00",
     "istTime": "00:30",
     "venue": "Los Angeles (SoFi)",
-    "stage": "quarter_final"
+    "stage": "quarter_final",
+    "status": "upcoming"
   },
   {
     "id": 99,
@@ -1211,7 +1309,8 @@ export const officialFixtures: Match[] = [
     "utcTime": "21:00",
     "istTime": "02:30",
     "venue": "Miami (Hard Rock)",
-    "stage": "quarter_final"
+    "stage": "quarter_final",
+    "status": "upcoming"
   },
   {
     "id": 100,
@@ -1224,7 +1323,8 @@ export const officialFixtures: Match[] = [
     "utcTime": "01:00",
     "istTime": "06:30",
     "venue": "Kansas City (Arrowhead)",
-    "stage": "quarter_final"
+    "stage": "quarter_final",
+    "status": "upcoming"
   },
   {
     "id": 101,
@@ -1237,7 +1337,8 @@ export const officialFixtures: Match[] = [
     "utcTime": "19:00",
     "istTime": "00:30",
     "venue": "Dallas (AT&T)",
-    "stage": "semi_final"
+    "stage": "semi_final",
+    "status": "upcoming"
   },
   {
     "id": 102,
@@ -1250,7 +1351,8 @@ export const officialFixtures: Match[] = [
     "utcTime": "19:00",
     "istTime": "00:30",
     "venue": "Atlanta (Mercedes-Benz)",
-    "stage": "semi_final"
+    "stage": "semi_final",
+    "status": "upcoming"
   },
   {
     "id": 103,
@@ -1263,6 +1365,21 @@ export const officialFixtures: Match[] = [
     "utcTime": "21:00",
     "istTime": "02:30",
     "venue": "Miami (Hard Rock Stadium)",
-    "stage": "third_place"
+    "stage": "third_place",
+    "status": "upcoming"
+  },
+  {
+    "id": 104,
+    "homeTeamId": null,
+    "awayTeamId": null,
+    "homeTeamPlaceholder": "Winner M101",
+    "awayTeamPlaceholder": "Winner M102",
+    "date": "2026-07-19T21:00:00.000Z",
+    "localTime": "17:00",
+    "utcTime": "21:00",
+    "istTime": "02:30",
+    "venue": "New York / New Jersey (MetLife Stadium)",
+    "stage": "final",
+    "status": "upcoming"
   }
 ];

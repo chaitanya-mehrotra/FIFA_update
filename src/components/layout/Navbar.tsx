@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Trophy, Home, Calendar, Users, Target, Info, GitBranch, LayoutGrid } from 'lucide-react';
+import { Menu, X, Trophy, Home, Calendar, Users, Target, Info, GitBranch, LayoutGrid, MapPin } from 'lucide-react';
 
 const navItems = [
   { path: '/', label: 'Home', icon: Home },
+  { path: '/stadiums', label: 'Stadiums', icon: MapPin },
   { path: '/fixtures', label: 'Fixtures', icon: Calendar },
   { path: '/group-stage', label: 'Groups', icon: LayoutGrid },
   { path: '/knockout', label: 'Knockout', icon: GitBranch },
