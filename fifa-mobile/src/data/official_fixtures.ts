@@ -459,7 +459,8 @@ export const officialFixtures: Match[] = [
   {
     "id": 36,
     "homeTeamId": "TUN",
-    "awayTeamId": "JPN",
+    "awayTeamId": null,
+    "awayTeamPlaceholder": "Japan ★",
     "date": "2026-06-21T04:00:00.000Z",
     "localTime": "22:00",
     "utcTime": "04:00",
