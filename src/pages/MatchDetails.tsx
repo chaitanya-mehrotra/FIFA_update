@@ -77,21 +77,46 @@ export default function MatchDetails() {
               <img
                 src={`https://flagcdn.com/w160/${home.flag}.png`}
                 alt={home.name}
-                className="w-20 h-14 lg:w-28 lg:h-20 rounded-lg object-cover mx-auto shadow-lg"
+                className={`w-20 h-14 lg:w-28 lg:h-20 rounded-lg object-cover mx-auto shadow-lg ${
+                  match.winnerTeamId === home.id ? 'ring-2 ring-fifa-gold shadow-fifa-gold/30' : ''
+                }`}
               />
             ) : (
               <div className="w-20 h-14 lg:w-28 lg:h-20 rounded-lg bg-white/10 mx-auto flex items-center justify-center text-xs text-gray-500">TBD</div>
             )}
-            <div className="text-lg font-bold text-white">{home?.name || match.homeTeamPlaceholder || 'TBD'}</div>
+            <div className={`text-lg font-bold ${match.winnerTeamId === home?.id ? 'text-fifa-gold' : 'text-white'}`}>
+              {home?.name || match.homeTeamPlaceholder || 'TBD'}
+            </div>
+            {match.winnerTeamId === home?.id && (
+              <span className="inline-flex items-center gap-1 text-[11px] font-bold text-fifa-gold bg-fifa-gold/15 px-2 py-0.5 rounded-full border border-fifa-gold/30">
+                ⭐ Winner
+              </span>
+            )}
           </div>
 
           {/* Score */}
-          <div className="text-center">
+          <div className="text-center flex flex-col items-center">
             {match.status === 'finished' || match.status === 'live' ? (
-              <div className="flex items-center gap-3">
-                <span className="text-4xl lg:text-5xl font-black text-white">{match.homeScore ?? 0}</span>
-                <span className="text-xl text-gray-500">–</span>
-                <span className="text-4xl lg:text-5xl font-black text-white">{match.awayScore ?? 0}</span>
+              <div className="flex flex-col items-center">
+                <div className="flex items-center gap-3">
+                  <span className={`text-4xl lg:text-5xl font-black ${match.winnerTeamId === home?.id ? 'text-fifa-gold' : 'text-white'}`}>
+                    {match.homeScore ?? 0}
+                  </span>
+                  <span className="text-xl text-gray-500">–</span>
+                  <span className={`text-4xl lg:text-5xl font-black ${match.winnerTeamId === away?.id ? 'text-fifa-gold' : 'text-white'}`}>
+                    {match.awayScore ?? 0}
+                  </span>
+                </div>
+                {match.penalties && (
+                  <div className="mt-1.5 text-xs font-bold text-fifa-gold bg-fifa-gold/15 px-2.5 py-0.5 rounded-full border border-fifa-gold/30">
+                    Penalties: {match.penalties.home} – {match.penalties.away}
+                  </div>
+                )}
+                {match.decision && (
+                  <div className="mt-1 text-xs text-gray-300 font-medium max-w-[220px]">
+                    {match.decision}
+                  </div>
+                )}
               </div>
             ) : (
               <div>
@@ -101,13 +126,13 @@ export default function MatchDetails() {
             )}
             <div className={`mt-2 text-xs font-semibold px-3 py-1 rounded-full inline-block ${
               match.status === 'live' ? 'bg-red-500/20 text-red-400' :
-              match.status === 'finished' ? 'bg-gray-500/20 text-gray-400' :
+              match.status === 'finished' ? 'bg-white/10 text-gray-300' :
               'bg-blue-500/20 text-blue-400'
             }`}>
               {match.status === 'live' 
                 ? `● LIVE ${match.matchMinute || ''}` 
                 : match.status === 'finished' 
-                  ? '✅ Full Time' 
+                  ? (match.penalties ? '✅ Full Time (Penalties)' : match.extraTime ? '✅ Full Time (A.E.T.)' : '✅ Full Time')
                   : '⏳ Upcoming'}
             </div>
           </div>
@@ -118,12 +143,21 @@ export default function MatchDetails() {
               <img
                 src={`https://flagcdn.com/w160/${away.flag}.png`}
                 alt={away.name}
-                className="w-20 h-14 lg:w-28 lg:h-20 rounded-lg object-cover mx-auto shadow-lg"
+                className={`w-20 h-14 lg:w-28 lg:h-20 rounded-lg object-cover mx-auto shadow-lg ${
+                  match.winnerTeamId === away.id ? 'ring-2 ring-fifa-gold shadow-fifa-gold/30' : ''
+                }`}
               />
             ) : (
               <div className="w-20 h-14 lg:w-28 lg:h-20 rounded-lg bg-white/10 mx-auto flex items-center justify-center text-xs text-gray-500">TBD</div>
             )}
-            <div className="text-lg font-bold text-white">{away?.name || match.awayTeamPlaceholder || 'TBD'}</div>
+            <div className={`text-lg font-bold ${match.winnerTeamId === away?.id ? 'text-fifa-gold' : 'text-white'}`}>
+              {away?.name || match.awayTeamPlaceholder || 'TBD'}
+            </div>
+            {match.winnerTeamId === away?.id && (
+              <span className="inline-flex items-center gap-1 text-[11px] font-bold text-fifa-gold bg-fifa-gold/15 px-2 py-0.5 rounded-full border border-fifa-gold/30">
+                ⭐ Winner
+              </span>
+            )}
           </div>
         </div>
 

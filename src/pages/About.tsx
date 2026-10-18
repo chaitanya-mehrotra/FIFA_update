@@ -30,19 +30,18 @@ export default function About() {
         </h2>
         <div className="space-y-3 text-sm text-gray-300 leading-relaxed">
           <p>
-            The <strong className="text-white">FIFA World Cup 2026™</strong> will be the 23rd edition of the
+            The <strong className="text-white">FIFA World Cup 2026™</strong> was the 23rd edition of the
             FIFA World Cup, the quadrennial international men's football championship contested by the
             national teams of the member associations of FIFA.
           </p>
           <p>
-            For the first time, the tournament will be hosted by three countries: the <strong className="text-white">United States</strong>,
+            For the first time in history, the tournament was jointly hosted by three nations: the <strong className="text-white">United States</strong>,
             <strong className="text-white"> Mexico</strong>, and <strong className="text-white">Canada</strong>.
-            It will also be the first edition to feature <strong className="text-fifa-gold">48 teams</strong>,
-            expanded from the previous 32-team format.
+            It was also the inaugural edition featuring the expanded <strong className="text-fifa-gold">48-nation format</strong> (104 matches total).
           </p>
           <p>
-            Matches will be played across <strong className="text-white">16 venues</strong> in all three
-            host nations, from June 11 to July 19, 2026.
+            Matches were contested across <strong className="text-white">16 world-class venues</strong> from June 11 to July 19, 2026.
+            <strong className="text-fifa-gold"> Spain</strong> were crowned World Champions after defeating Argentina 1–0 after extra time in the Grand Final at MetLife Stadium, New York/New Jersey.
           </p>
         </div>
 

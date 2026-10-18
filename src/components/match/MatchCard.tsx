@@ -81,12 +81,16 @@ export default function MatchCard({ match, compact = false }: MatchCardProps) {
           <span className="text-[11px] font-semibold text-fifa-gold uppercase tracking-wider">
             {stageLabels[match.stage]}
           </span>
-          <span className={`text-[10px] font-semibold px-2 py-0.5 rounded-full uppercase ${statusColors[match.status]}`}>
+          <span className={`text-[10px] font-semibold px-2 py-0.5 rounded-full uppercase ${
+            match.decision === 'PEN' ? 'bg-amber-500/20 text-amber-300' :
+            match.decision === 'AET' ? 'bg-purple-500/20 text-purple-300' :
+            statusColors[match.status]
+          }`}>
             {match.status === 'live' 
               ? `● LIVE ${match.matchMinute || ''}` 
               : match.status === 'finished' 
-                ? '✅ FT' 
-                : '⏳ Upcoming'}
+                ? (match.decision === 'PEN' ? 'PEN' : match.decision === 'AET' ? 'AET' : 'FT')
+                : 'Upcoming'}
           </span>
         </div>
 
@@ -95,7 +99,9 @@ export default function MatchCard({ match, compact = false }: MatchCardProps) {
           {/* Home */}
           <div className="flex items-center gap-2 flex-1 min-w-0">
             <TeamFlag teamId={match.homeTeamId} size={compact ? 'sm' : 'md'} />
-            <span className="text-sm font-semibold text-white truncate">
+            <span className={`text-sm font-semibold truncate ${
+              match.winnerTeamId === match.homeTeamId ? 'text-fifa-gold font-bold' : 'text-white'
+            }`}>
               {homeTeam?.name || match.homeTeamPlaceholder || 'TBD'}
             </span>
           </div>
@@ -103,10 +109,30 @@ export default function MatchCard({ match, compact = false }: MatchCardProps) {
           {/* Score / Time */}
           <div className="flex flex-col items-center px-3 shrink-0">
             {match.status === 'finished' || match.status === 'live' ? (
-              <div className="flex items-center gap-2">
-                <span className="text-xl font-bold text-white">{match.homeScore ?? '-'}</span>
-                <span className="text-sm text-gray-400">-</span>
-                <span className="text-xl font-bold text-white">{match.awayScore ?? '-'}</span>
+              <div className="flex flex-col items-center">
+                <div className="flex items-center gap-2">
+                  <span className={`text-xl font-bold ${
+                    match.winnerTeamId === match.homeTeamId ? 'text-fifa-gold' : 'text-white'
+                  }`}>
+                    {match.homeScore ?? '-'}
+                  </span>
+                  <span className="text-sm text-gray-400">-</span>
+                  <span className={`text-xl font-bold ${
+                    match.winnerTeamId === match.awayTeamId ? 'text-fifa-gold' : 'text-white'
+                  }`}>
+                    {match.awayScore ?? '-'}
+                  </span>
+                </div>
+                {match.decision === 'PEN' && match.penalties && (
+                  <span className="text-[10px] font-semibold text-amber-400">
+                    ({match.penalties.home}–{match.penalties.away} pen)
+                  </span>
+                )}
+                {match.decision === 'AET' && (
+                  <span className="text-[10px] font-medium text-purple-400">
+                    (A.E.T.)
+                  </span>
+                )}
               </div>
             ) : (
               <div className="text-center">
@@ -118,7 +144,9 @@ export default function MatchCard({ match, compact = false }: MatchCardProps) {
 
           {/* Away Team */}
           <div className="flex items-center gap-2 flex-1 min-w-0 justify-end">
-            <span className="text-sm font-semibold text-white truncate text-right">
+            <span className={`text-sm font-semibold truncate text-right ${
+              match.winnerTeamId === match.awayTeamId ? 'text-fifa-gold font-bold' : 'text-white'
+            }`}>
               {awayTeam?.name || match.awayTeamPlaceholder || 'TBD'}
             </span>
             <TeamFlag teamId={match.awayTeamId} size={compact ? 'sm' : 'md'} />
@@ -127,20 +155,11 @@ export default function MatchCard({ match, compact = false }: MatchCardProps) {
 
         {/* Footer Info & Actions */}
         <div className="flex flex-col gap-2 mt-3 pt-3 border-t border-white/5">
-          {/* Action Button */}
-          {match.status === 'upcoming' ? (
-            <div className="text-center bg-white/5 hover:bg-white/10 rounded py-1.5 transition-colors border border-white/5">
-              <span className="text-[11px] font-bold text-fifa-gold uppercase tracking-wider">
-                {prediction ? 'Edit Prediction' : 'Predict Match'}
-              </span>
-            </div>
-          ) : (
-            <div className="text-center bg-white/5 hover:bg-white/10 rounded py-1.5 transition-colors border border-white/5">
-              <span className="text-[11px] font-bold text-gray-400 uppercase tracking-wider">
-                View Result
-              </span>
-            </div>
-          )}
+          <div className="text-center bg-white/5 hover:bg-white/10 rounded py-1.5 transition-colors border border-white/5">
+            <span className="text-[11px] font-bold text-gray-300 uppercase tracking-wider">
+              View Match Details
+            </span>
+          </div>
 
           {!compact && (
             <div className="flex items-center justify-between text-[11px] text-gray-400">

@@ -40,17 +40,19 @@ export default function GroupTable({ group, standings }: GroupTableProps) {
           <tbody>
             {standings.map((s, idx) => {
               const team = teams ? teams.find(t => t.id === s.teamId) : null;
-              // Top 2 qualify (top 8 third-place in 12 groups) but visually highlight top 2
-              const qualified = idx < 2;
+              const isTop2 = idx < 2;
+              const isBestThird = s.qualificationStatus === 'BEST_THIRD';
+              const isQualified = isTop2 || isBestThird;
+
               return (
                 <tr
                   key={s.teamId}
                   className={`border-b border-white/5 transition-colors hover:bg-white/5 ${
-                    qualified ? 'bg-green-500/5' : ''
+                    isTop2 ? 'bg-green-500/10' : isBestThird ? 'bg-blue-500/10' : ''
                   }`}
                 >
                   <td className="py-2.5 px-3">
-                    <span className={`text-xs font-bold ${qualified ? 'text-green-400' : 'text-gray-400'}`}>
+                    <span className={`text-xs font-bold ${isTop2 ? 'text-green-400' : isBestThird ? 'text-blue-400' : 'text-gray-400'}`}>
                       {idx + 1}
                     </span>
                   </td>
@@ -64,7 +66,14 @@ export default function GroupTable({ group, standings }: GroupTableProps) {
                           loading="lazy"
                         />
                       )}
-                      <span className="font-medium text-white text-sm">{team?.name || s.teamId}</span>
+                      <span className={`font-medium text-sm ${isQualified ? 'text-white' : 'text-gray-400'}`}>
+                        {team?.name || s.teamId}
+                      </span>
+                      {isBestThird && (
+                        <span className="text-[9px] font-bold text-blue-300 bg-blue-500/20 px-1 rounded">
+                          3rd Adv
+                        </span>
+                      )}
                     </div>
                   </td>
                   <td className="text-center py-2.5 px-1.5 text-gray-300">{s.played}</td>
@@ -88,9 +97,15 @@ export default function GroupTable({ group, standings }: GroupTableProps) {
         </table>
       </div>
       {/* Legend */}
-      <div className="px-4 py-2 border-t border-white/5 flex items-center gap-2">
-        <div className="w-2 h-2 rounded-full bg-green-400" />
-        <span className="text-[10px] text-gray-400">Advances to Knockout Stage</span>
+      <div className="px-4 py-2 border-t border-white/5 flex items-center justify-between text-[10px] text-gray-400">
+        <div className="flex items-center gap-3">
+          <span className="flex items-center gap-1.5">
+            <span className="w-2 h-2 rounded-full bg-green-400" /> Top 2 Advance
+          </span>
+          <span className="flex items-center gap-1.5">
+            <span className="w-2 h-2 rounded-full bg-blue-400" /> Best 3rd Advance
+          </span>
+        </div>
       </div>
     </motion.div>
   );

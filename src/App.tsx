@@ -25,6 +25,8 @@ import Predictions from './pages/Predictions';
 import MatchDetails from './pages/MatchDetails';
 import About from './pages/About';
 
+import Statistics from './pages/Statistics';
+
 function PageWrapper({ children }: { children: React.ReactNode }) {
   return (
     <motion.div
@@ -52,9 +54,10 @@ export default function App() {
                   <Route path="/stadiums" element={<PageWrapper><Stadiums /></PageWrapper>} />
                   <Route path="/fixtures" element={<PageWrapper><Fixtures /></PageWrapper>} />
                   <Route path="/group-stage" element={<PageWrapper><GroupStage /></PageWrapper>} />
+                  <Route path="/groups" element={<PageWrapper><GroupStage /></PageWrapper>} />
                   <Route path="/knockout" element={<PageWrapper><KnockoutStage /></PageWrapper>} />
                   <Route path="/teams" element={<PageWrapper><Teams /></PageWrapper>} />
-
+                  <Route path="/statistics" element={<PageWrapper><Statistics /></PageWrapper>} />
                   <Route path="/predictions" element={<PageWrapper><Predictions /></PageWrapper>} />
                   <Route path="/match/:id" element={<PageWrapper><MatchDetails /></PageWrapper>} />
                   <Route path="/about" element={<PageWrapper><About /></PageWrapper>} />

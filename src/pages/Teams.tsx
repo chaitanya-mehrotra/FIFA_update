@@ -1,25 +1,108 @@
 import { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { Search, Users, SlidersHorizontal, CheckCircle2, Trophy, Medal, Clock, XCircle, Target } from 'lucide-react';
+import { Search, Users, SlidersHorizontal, Trophy, Target } from 'lucide-react';
 import { useTeams } from '../hooks/useTeams';
-import { useStandings } from '../hooks/useStandings';
-import { calculateQualification } from '../utils/qualification';
+import { useFixtures } from '../hooks/useFixtures';
 
 const confederations = ['All', 'UEFA', 'CONMEBOL', 'CONCACAF', 'AFC', 'CAF', 'OFC'];
 
 export default function Teams() {
   const { data: teams, isLoading: teamsLoading } = useTeams();
-  const { data: standings } = useStandings();
+  const { data: fixtures, isLoading: fixturesLoading } = useFixtures();
   const [search, setSearch] = useState('');
   const [confFilter, setConfFilter] = useState('All');
-  const [sortBy, setSortBy] = useState<'name' | 'ranking'>('ranking');
+  const [sortBy, setSortBy] = useState<'ranking' | 'name' | 'finish'>('finish');
 
-  const isLoading = teamsLoading;
+  const isLoading = teamsLoading || fixturesLoading;
 
-  const qual = useMemo(() => {
-    if (!standings) return null;
-    return calculateQualification(standings);
-  }, [standings]);
+  const teamTournamentFinishes = useMemo(() => {
+    const finishes: Record<string, { label: string; color: string; rankScore: number }> = {};
+    if (!fixtures) return finishes;
+
+    // Final & 3rd place
+    const finalMatch = fixtures.find(m => m.stage === 'final');
+    if (finalMatch && finalMatch.winnerTeamId) {
+      finishes[finalMatch.winnerTeamId] = {
+        label: '🏆 World Champions',
+        color: 'text-fifa-gold bg-fifa-gold/15 border-fifa-gold/40',
+        rankScore: 1,
+      };
+      const loserId = finalMatch.winnerTeamId === finalMatch.homeTeamId ? finalMatch.awayTeamId : finalMatch.homeTeamId;
+      if (loserId) {
+        finishes[loserId] = {
+          label: '🥈 Runners-Up',
+          color: 'text-gray-200 bg-white/15 border-white/30',
+          rankScore: 2,
+        };
+      }
+    }
+
+    const thirdMatch = fixtures.find(m => m.stage === 'third_place');
+    if (thirdMatch && thirdMatch.winnerTeamId) {
+      finishes[thirdMatch.winnerTeamId] = {
+        label: '🥉 3rd Place',
+        color: 'text-amber-400 bg-amber-500/15 border-amber-500/30',
+        rankScore: 3,
+      };
+      const loserId = thirdMatch.winnerTeamId === thirdMatch.homeTeamId ? thirdMatch.awayTeamId : thirdMatch.homeTeamId;
+      if (loserId) {
+        finishes[loserId] = {
+          label: '4th Place',
+          color: 'text-purple-300 bg-purple-500/15 border-purple-500/30',
+          rankScore: 4,
+        };
+      }
+    }
+
+    // Quarter-finals losers
+    fixtures.filter(m => m.stage === 'quarter_final').forEach(m => {
+      const loserId = m.winnerTeamId === m.homeTeamId ? m.awayTeamId : m.homeTeamId;
+      if (loserId && !finishes[loserId]) {
+        finishes[loserId] = {
+          label: 'Quarter-Finalist',
+          color: 'text-blue-400 bg-blue-500/15 border-blue-500/30',
+          rankScore: 5,
+        };
+      }
+    });
+
+    // Round of 16 losers
+    fixtures.filter(m => m.stage === 'round_of_16').forEach(m => {
+      const loserId = m.winnerTeamId === m.homeTeamId ? m.awayTeamId : m.homeTeamId;
+      if (loserId && !finishes[loserId]) {
+        finishes[loserId] = {
+          label: 'Round of 16',
+          color: 'text-cyan-400 bg-cyan-500/15 border-cyan-500/30',
+          rankScore: 6,
+        };
+      }
+    });
+
+    // Round of 32 losers
+    fixtures.filter(m => m.stage === 'round_of_32').forEach(m => {
+      const loserId = m.winnerTeamId === m.homeTeamId ? m.awayTeamId : m.homeTeamId;
+      if (loserId && !finishes[loserId]) {
+        finishes[loserId] = {
+          label: 'Round of 32',
+          color: 'text-emerald-400 bg-emerald-500/15 border-emerald-500/30',
+          rankScore: 7,
+        };
+      }
+    });
+
+    // Remaining: Group Stage
+    teams?.forEach(t => {
+      if (!finishes[t.id]) {
+        finishes[t.id] = {
+          label: 'Group Stage',
+          color: 'text-gray-400 bg-white/5 border-white/10',
+          rankScore: 8,
+        };
+      }
+    });
+
+    return finishes;
+  }, [fixtures, teams]);
 
   const filteredTeams = useMemo(() => {
     if (!teams) return [];
@@ -39,21 +122,27 @@ export default function Teams() {
     }
 
     result.sort((a, b) => {
+      if (sortBy === 'finish') {
+        const rankA = teamTournamentFinishes[a.id]?.rankScore ?? 99;
+        const rankB = teamTournamentFinishes[b.id]?.rankScore ?? 99;
+        if (rankA !== rankB) return rankA - rankB;
+        return (a.ranking || 999) - (b.ranking || 999);
+      }
       if (sortBy === 'ranking') return (a.ranking || 999) - (b.ranking || 999);
       return a.name.localeCompare(b.name);
     });
 
     return result;
-  }, [teams, search, confFilter, sortBy]);
+  }, [teams, search, confFilter, sortBy, teamTournamentFinishes]);
 
   return (
     <div className="space-y-8">
       <div>
         <h1 className="text-3xl font-black text-white flex items-center gap-3">
           <Users className="w-8 h-8 text-fifa-gold" />
-          Teams
+          Teams Archive
         </h1>
-        <p className="text-gray-400 mt-1">48 nations competing for the FIFA World Cup 2026™</p>
+        <p className="text-gray-400 mt-1">48 participating nations and their official final tournament finish</p>
       </div>
 
       {isLoading ? (
@@ -87,13 +176,32 @@ export default function Teams() {
                 ))}
               </select>
 
-              <button
-                onClick={() => setSortBy(prev => prev === 'ranking' ? 'name' : 'ranking')}
-                className="px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-sm text-white hover:bg-white/10 transition-colors flex items-center gap-2"
-              >
-                <SlidersHorizontal className="w-4 h-4" />
-                Sort by {sortBy === 'ranking' ? 'Ranking' : 'Name'}
-              </button>
+              <div className="flex items-center gap-1 bg-white/5 border border-white/10 rounded-lg p-1 text-xs">
+                <button
+                  onClick={() => setSortBy('finish')}
+                  className={`px-3 py-1.5 rounded-md font-medium transition-colors ${
+                    sortBy === 'finish' ? 'bg-fifa-gold text-fifa-navy font-bold' : 'text-gray-400 hover:text-white'
+                  }`}
+                >
+                  Tournament Finish
+                </button>
+                <button
+                  onClick={() => setSortBy('ranking')}
+                  className={`px-3 py-1.5 rounded-md font-medium transition-colors ${
+                    sortBy === 'ranking' ? 'bg-fifa-gold text-fifa-navy font-bold' : 'text-gray-400 hover:text-white'
+                  }`}
+                >
+                  FIFA Rank
+                </button>
+                <button
+                  onClick={() => setSortBy('name')}
+                  className={`px-3 py-1.5 rounded-md font-medium transition-colors ${
+                    sortBy === 'name' ? 'bg-fifa-gold text-fifa-navy font-bold' : 'text-gray-400 hover:text-white'
+                  }`}
+                >
+                  Name
+                </button>
+              </div>
             </div>
             <div className="mt-3 text-xs text-gray-400">
               Showing {filteredTeams.length} of {teams?.length || 0} teams
@@ -105,81 +213,57 @@ export default function Teams() {
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
             initial="hidden"
             animate="show"
-            variants={{ hidden: {}, show: { transition: { staggerChildren: 0.03 } } }}
+            variants={{ hidden: {}, show: { transition: { staggerChildren: 0.02 } } }}
           >
             {filteredTeams.map((team) => {
-                let badge = null;
-                const status = qual?.teamStatus[team.id] || 'TBD';
-                
-                if (status === 'WINNER') {
-                   badge = <span className="flex items-center gap-1 text-[10px] font-bold text-green-400 bg-green-500/10 px-2 py-1 rounded border border-green-500/20"><Trophy className="w-3 h-3" /> Confirmed Group Winner</span>;
-                } else if (status === 'RUNNER_UP') {
-                   badge = <span className="flex items-center gap-1 text-[10px] font-bold text-blue-400 bg-blue-500/10 px-2 py-1 rounded border border-blue-500/20"><Medal className="w-3 h-3" /> Confirmed Runner-Up</span>;
-                } else if (status === 'QUALIFIED') {
-                   // This covers teams that are guaranteed Top 2 but seed is unknown, OR confirmed best 3rd place
-                   badge = <span className="flex items-center gap-1 text-[10px] font-bold text-fifa-gold bg-fifa-gold/10 px-2 py-1 rounded border border-fifa-gold/20"><CheckCircle2 className="w-3 h-3" /> Qualified</span>;
-                } else if (status === 'ELIMINATED') {
-                   badge = <span className="flex items-center gap-1 text-[10px] font-bold text-red-400 bg-red-500/10 px-2 py-1 rounded border border-red-500/20"><XCircle className="w-3 h-3" /> Eliminated</span>;
-                } else {
-                   // TBD
-                   badge = <span className="flex items-center gap-1 text-[10px] font-bold text-gray-400 bg-gray-500/10 px-2 py-1 rounded border border-gray-500/20"><Clock className="w-3 h-3" /> Qualification Pending</span>;
-                }
+              const finish = teamTournamentFinishes[team.id] || {
+                label: 'Group Stage',
+                color: 'text-gray-400 bg-white/5 border-white/10',
+                rankScore: 8,
+              };
 
-                return (
-                  <motion.div
-                    key={team.id}
-                    variants={{ hidden: { opacity: 0, y: 10 }, show: { opacity: 1, y: 0 } }}
-                    whileHover={{ scale: 1.02 }}
-                    className={`glass-card p-5 cursor-pointer relative ${status === 'ELIMINATED' ? 'opacity-50 hover:opacity-100 grayscale hover:grayscale-0 transition-all' : ''}`}
-                  >
-                    <div className="flex items-start justify-between mb-4">
-                      <div className="flex items-center gap-3">
-                        <img
-                          src={`https://flagcdn.com/w80/${team.flag}.png`}
-                          alt={team.name}
-                          className="w-12 h-8 rounded object-cover shadow-md"
-                          loading="lazy"
-                        />
-                        <div>
-                          <h3 className="text-sm font-bold text-white">{team.name}</h3>
-                          <span className="text-[11px] text-gray-400">{team.confederation || ''} • Group {team.group || ''}</span>
-                        </div>
+              return (
+                <motion.div
+                  key={team.id}
+                  variants={{ hidden: { opacity: 0, y: 10 }, show: { opacity: 1, y: 0 } }}
+                  whileHover={{ scale: 1.02 }}
+                  className={`glass-card p-5 relative transition-all ${
+                    finish.rankScore === 1 ? 'border-fifa-gold/60 shadow-lg shadow-fifa-gold/15 bg-fifa-gold/[0.03]' : ''
+                  }`}
+                >
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="flex items-center gap-3">
+                      <img
+                        src={`https://flagcdn.com/w80/${team.flag}.png`}
+                        alt={team.name}
+                        className="w-12 h-8 rounded object-cover shadow-md"
+                        loading="lazy"
+                      />
+                      <div>
+                        <h3 className="text-sm font-bold text-white">{team.name}</h3>
+                        <span className="text-[11px] text-gray-400">{team.confederation || ''} • Group {team.group || ''}</span>
                       </div>
                     </div>
-                    
-                    <div className="mb-4">
-                      {badge}
-                    </div>
+                  </div>
 
-                    <div className="space-y-2">
-                      <div className="flex items-center justify-between text-xs">
-                        <span className="text-gray-400">FIFA Ranking</span>
-                        <span className="font-bold text-fifa-gold">#{team.ranking || 'N/A'}</span>
-                      </div>
-                      <div className="flex items-center justify-between text-xs">
-                        <span className="text-gray-400">Coach</span>
-                        <span className="font-semibold text-white">{team.coach || 'TBD'}</span>
-                      </div>
-                      
-                      {/* Community Picks Stat */}
-                      <div className="mt-3 pt-3 border-t border-white/5">
-                        <div className="flex items-center justify-between text-[11px] mb-1">
-                          <span className="text-gray-400 flex items-center gap-1"><Target className="w-3 h-3" /> Community Picks</span>
-                          <span className="font-bold text-fifa-gold">
-                            {/* Mock realistic community percentage based on ranking */}
-                            {team.ranking ? Math.max(10, Math.min(85, Math.floor(100 - (team.ranking * 1.5)))) : 25}%
-                          </span>
-                        </div>
-                        <div className="w-full h-1.5 bg-white/5 rounded-full overflow-hidden">
-                          <div 
-                            className="h-full bg-fifa-gold rounded-full" 
-                            style={{ width: `${team.ranking ? Math.max(10, Math.min(85, Math.floor(100 - (team.ranking * 1.5)))) : 25}%` }} 
-                          />
-                        </div>
-                      </div>
+                  <div className="mb-4">
+                    <span className={`inline-flex items-center gap-1.5 text-[11px] font-bold px-2.5 py-1 rounded-full border ${finish.color}`}>
+                      {finish.label}
+                    </span>
+                  </div>
+
+                  <div className="space-y-2">
+                    <div className="flex items-center justify-between text-xs">
+                      <span className="text-gray-400">FIFA Ranking</span>
+                      <span className="font-bold text-fifa-gold">#{team.ranking || 'N/A'}</span>
                     </div>
-                  </motion.div>
-                );
+                    <div className="flex items-center justify-between text-xs">
+                      <span className="text-gray-400">Head Coach</span>
+                      <span className="font-semibold text-white">{team.coach || 'TBD'}</span>
+                    </div>
+                  </div>
+                </motion.div>
+              );
             })}
           </motion.div>
         </>

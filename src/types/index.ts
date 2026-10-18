@@ -37,6 +37,10 @@ export interface Match {
   matchMinute?: string; // e.g. "34'", "45+2'", "HT", "90+3'"
   winnerTo?: number;
   loserTo?: number;
+  extraTime?: boolean;
+  penalties?: { home: number; away: number };
+  winnerTeamId?: string;
+  decision?: 'FT' | 'AET' | 'PEN';
 }
 
 export interface GroupStanding {
@@ -49,6 +53,8 @@ export interface GroupStanding {
   goalsAgainst: number;
   goalDifference: number;
   points: number;
+  position?: number;
+  qualificationStatus?: 'WINNER' | 'RUNNER_UP' | 'BEST_THIRD' | 'ELIMINATED';
 }
 
 // API Types

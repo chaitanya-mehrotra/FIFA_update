@@ -19,8 +19,8 @@ export function BracketMatch({ match, teams, isFinal = false, qual }: BracketMat
   const awayScore = match.awayScore ?? 0;
   const isFinished = match.status === 'finished';
 
-  const homeWon = isFinished && homeScore > awayScore;
-  const awayWon = isFinished && awayScore > homeScore;
+  const homeWon = isFinished && (match.winnerTeamId ? match.winnerTeamId === match.homeTeamId : homeScore > awayScore);
+  const awayWon = isFinished && (match.winnerTeamId ? match.winnerTeamId === match.awayTeamId : awayScore > homeScore);
 
   const hasHome = !!home;
   const hasAway = !!away;
@@ -131,8 +131,8 @@ export function BracketMatch({ match, teams, isFinal = false, qual }: BracketMat
               </span>
             )}
             {match.status === 'finished' && (
-              <span className="text-[9px] font-bold text-gray-500 bg-white/5 px-1.5 py-0.5 rounded">
-                FT
+              <span className="text-[9px] font-bold text-gray-300 bg-white/10 px-1.5 py-0.5 rounded">
+                {match.penalties ? `PEN (${match.penalties.home}-${match.penalties.away})` : match.extraTime ? 'AET' : 'FT'}
               </span>
             )}
             {match.status === 'upcoming' && (
