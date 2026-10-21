@@ -23,12 +23,12 @@ const groupResults = {
   14: { hs: 1, as: 1, hScorers: [{ player: 'Kevin De Bruyne', minute: "27'" }], aScorers: [{ player: 'Mohamed Salah', minute: "64'" }] },
   15: { hs: 1, as: 1, hScorers: [{ player: 'Salem Al-Dawsari', minute: "40'" }], aScorers: [{ player: 'Darwin Núñez', minute: "62'" }] },
   16: { hs: 2, as: 2, hScorers: [{ player: 'Mehdi Taremi', minute: "18'" }, { player: 'Sardar Azmoun', minute: "53'" }], aScorers: [{ player: 'Chris Wood', minute: "33'" }, { player: 'Chris Wood', minute: "70'" }] },
-  17: { hs: 3, as: 1, hScorers: [{ player: 'Kylian Mbappé', minute: "21'" }, { player: 'Antoine Griezmann', minute: "43'" }, { player: 'Kylian Mbappé', minute: "65'" }], aScorers: [{ player: 'Nicolas Jackson', minute: "78'" }] },
-  18: { hs: 1, as: 4, hScorers: [{ player: 'Aymen Hussein', minute: "52'" }], aScorers: [{ player: 'Erling Haaland', minute: "14'" }, { player: 'Erling Haaland', minute: "38'" }, { player: 'Erling Haaland', minute: "69'" }, { player: 'Martin Ødegaard', minute: "82'" }] },
+  17: { hs: 3, as: 1, hScorers: [{ player: 'Kylian Mbappé', minute: "21'" }, { player: 'Antoine Griezmann', minute: "43'" }, { player: 'Bradley Barcola', minute: "65'" }], aScorers: [{ player: 'Nicolas Jackson', minute: "78'" }] },
+  18: { hs: 1, as: 4, hScorers: [{ player: 'Aymen Hussein', minute: "52'" }], aScorers: [{ player: 'Erling Haaland', minute: "14'" }, { player: 'Alexander Sørloth', minute: "38'" }, { player: 'Erling Haaland', minute: "69'" }, { player: 'Martin Ødegaard', minute: "82'" }] },
   19: { hs: 3, as: 0, hScorers: [{ player: 'Lionel Messi', minute: "22'" }, { player: 'Julián Álvarez', minute: "47'" }, { player: 'Lautaro Martínez', minute: "81'" }], aScorers: [] },
   20: { hs: 3, as: 1, hScorers: [{ player: 'Christoph Baumgartner', minute: "16'" }, { player: 'Marcel Sabitzer', minute: "39'" }, { player: 'Marko Arnautović', minute: "75'" }], aScorers: [{ player: 'Mousa Al-Tamari', minute: "60'" }] },
   21: { hs: 1, as: 1, hScorers: [{ player: 'Cristiano Ronaldo', minute: "23'" }], aScorers: [{ player: 'Yoane Wissa', minute: "59'" }] },
-  22: { hs: 4, as: 2, hScorers: [{ player: 'Harry Kane', minute: "12'" }, { player: 'Jude Bellingham', minute: "33'" }, { player: 'Harry Kane', minute: "45+2'" }, { player: 'Phil Foden', minute: "68'" }], aScorers: [{ player: 'Andrej Kramarić', minute: "24'" }, { player: 'Joško Gvardiol', minute: "77'" }] },
+  22: { hs: 4, as: 2, hScorers: [{ player: 'Harry Kane', minute: "12'" }, { player: 'Jude Bellingham', minute: "33'" }, { player: 'Phil Foden', minute: "45+2'" }, { player: 'Declan Rice', minute: "68'" }], aScorers: [{ player: 'Andrej Kramarić', minute: "24'" }, { player: 'Joško Gvardiol', minute: "77'" }] },
   23: { hs: 1, as: 0, hScorers: [{ player: 'Mohammed Kudus', minute: "53'" }], aScorers: [] },
   24: { hs: 1, as: 3, hScorers: [{ player: 'Abbosbek Fayzullaev', minute: "66'" }], aScorers: [{ player: 'Daniel Muñoz', minute: "18'" }, { player: 'Luis Díaz', minute: "44'" }, { player: 'Jaminton Campaz', minute: "79'" }] },
   25: { hs: 1, as: 1, hScorers: [{ player: 'Patrik Schick', minute: "42'" }], aScorers: [{ player: 'Percy Tau', minute: "55'" }] },
@@ -49,7 +49,7 @@ const groupResults = {
   40: { hs: 1, as: 3, hScorers: [{ player: 'Chris Wood', minute: "45'" }], aScorers: [{ player: 'Mohamed Salah', minute: "12'" }, { player: 'Mohamed Salah', minute: "59'" }, { player: 'Mostafa Mohamed', minute: "81'" }] },
   41: { hs: 2, as: 0, hScorers: [{ player: 'Lionel Messi', minute: "35'" }, { player: 'Enzo Fernández', minute: "78'" }], aScorers: [] },
   42: { hs: 3, as: 0, hScorers: [{ player: 'Kylian Mbappé', minute: "11'" }, { player: 'Bradley Barcola', minute: "49'" }, { player: 'Randal Kolo Muani', minute: "76'" }], aScorers: [] },
-  43: { hs: 3, as: 2, hScorers: [{ player: 'Erling Haaland', minute: "29'" }, { player: 'Alexander Sørloth', minute: "55'" }, { player: 'Erling Haaland', minute: "73'" }], aScorers: [{ player: 'Sadio Mané', minute: "41'" }, { player: 'Ismaïla Sarr', minute: "86'" }] },
+  43: { hs: 3, as: 2, hScorers: [{ player: 'Erling Haaland', minute: "29'" }, { player: 'Alexander Sørloth', minute: "55'" }, { player: 'Antonio Nusa', minute: "73'" }], aScorers: [{ player: 'Sadio Mané', minute: "41'" }, { player: 'Ismaïla Sarr', minute: "86'" }] },
   44: { hs: 1, as: 2, hScorers: [{ player: 'Yazan Al-Naimat', minute: "54'" }], aScorers: [{ player: 'Riyad Mahrez', minute: "28'" }, { player: 'Baghdad Bounedjah', minute: "69'" }] },
   45: { hs: 5, as: 0, hScorers: [{ player: 'Cristiano Ronaldo', minute: "14'" }, { player: 'Nuno Mendes', minute: "27'" }, { player: 'Bruno Fernandes', minute: "41'" }, { player: 'Cristiano Ronaldo', minute: "58'" }, { player: 'Bernardo Silva', minute: "72'" }], aScorers: [] },
   46: { hs: 0, as: 0, hScorers: [], aScorers: [] },
@@ -78,7 +78,7 @@ const groupResults = {
   69: { hs: 1, as: 1, hScorers: [{ player: 'Luis Díaz', minute: "39'" }], aScorers: [{ player: 'Rafael Leão', minute: "52'" }] },
   70: { hs: 3, as: 1, hScorers: [{ player: 'Chancel Mbemba', minute: "21'" }, { player: 'Yoane Wissa', minute: "49'" }, { player: 'Fiston Mayele', minute: "75'" }], aScorers: [{ player: 'Eldor Shomurodov', minute: "84'" }] },
   71: { hs: 3, as: 3, hScorers: [{ player: 'Riyad Mahrez', minute: "19'" }, { player: 'Rayan Aït-Nouri', minute: "43'" }, { player: 'Amine Gouiri', minute: "86'" }], aScorers: [{ player: 'Marcel Sabitzer', minute: "12'" }, { player: 'Konrad Laimer', minute: "34'" }, { player: 'Michael Gregoritsch', minute: "72'" }] },
-  72: { hs: 1, as: 3, hScorers: [{ player: 'Mousa Al-Tamari', minute: "41'" }], aScorers: [{ player: 'Lionel Messi', minute: "15'" }, { player: 'Alexis Mac Allister', minute: "53'" }, { player: 'Lionel Messi', minute: "68'" }] },
+  72: { hs: 1, as: 3, hScorers: [{ player: 'Mousa Al-Tamari', minute: "41'" }], aScorers: [{ player: 'Lionel Messi', minute: "15'" }, { player: 'Alexis Mac Allister', minute: "53'" }, { player: 'Lautaro Martínez', minute: "68'" }] },
 };
 
 // Verified Knockout Stage Matches (Matches 73 to 104)
@@ -118,7 +118,7 @@ const knockoutResults = {
     homeTeamId: 'CIV', awayTeamId: 'NOR',
     hs: 1, as: 2,
     hScorers: [{ player: 'Franck Kessié', minute: "50'" }],
-    aScorers: [{ player: 'Erling Haaland', minute: "26'" }, { player: 'Erling Haaland', minute: "79'" }],
+    aScorers: [{ player: 'Erling Haaland', minute: "26'" }, { player: 'Alexander Sørloth', minute: "79'" }],
     decision: 'FT', winnerTeamId: 'NOR'
   },
   78: {
@@ -220,7 +220,7 @@ const knockoutResults = {
     homeTeamId: 'BRA', awayTeamId: 'NOR',
     hs: 1, as: 2,
     hScorers: [{ player: 'Rodrygo', minute: "41'" }],
-    aScorers: [{ player: 'Erling Haaland', minute: "31'" }, { player: 'Erling Haaland', minute: "88'" }],
+    aScorers: [{ player: 'Martin Ødegaard', minute: "31'" }, { player: 'Erling Haaland', minute: "88'" }],
     decision: 'FT', winnerTeamId: 'NOR'
   },
   92: {
@@ -285,7 +285,7 @@ const knockoutResults = {
   100: {
     homeTeamId: 'ARG', awayTeamId: 'SUI',
     hs: 3, as: 1,
-    hScorers: [{ player: 'Lionel Messi', minute: "35'" }, { player: 'Julián Álvarez', minute: "64'" }, { player: 'Lionel Messi', minute: "82'" }],
+    hScorers: [{ player: 'Lionel Messi', minute: "35'" }, { player: 'Julián Álvarez', minute: "64'" }, { player: 'Lautaro Martínez', minute: "82'" }],
     aScorers: [{ player: 'Breel Embolo', minute: "49'" }],
     decision: 'FT', winnerTeamId: 'ARG'
   },

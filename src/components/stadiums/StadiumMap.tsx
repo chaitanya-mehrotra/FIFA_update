@@ -35,10 +35,18 @@ interface StadiumMapProps {
   onSelectStadium: (stadium: Stadium) => void;
 }
 
-// Component to handle map interactions like flying to selected marker
+// Component to handle map interactions like flying to selected marker and invalidating size
 function MapEffects({ selectedStadium }: { selectedStadium: Stadium | null }) {
   const map = useMap();
   
+  // Ensure Leaflet calculates accurate container dimensions upon load
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      map.invalidateSize();
+    }, 150);
+    return () => clearTimeout(timer);
+  }, [map]);
+
   useEffect(() => {
     if (selectedStadium) {
       map.flyTo(selectedStadium.coordinates, 6, {
@@ -57,17 +65,20 @@ export default function StadiumMap({ stadiums, selectedStadium, onSelectStadium 
   const defaultZoom = 4;
 
   return (
-    <div className="w-full h-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl relative z-0">
+    <div className="w-full h-full min-h-[520px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl relative z-0">
       <MapContainer 
         center={defaultCenter} 
         zoom={defaultZoom} 
-        className="w-full h-[600px] md:h-full min-h-[500px] bg-[#0f172a]"
-        zoomControl={false}
+        style={{ width: '100%', height: '100%', minHeight: '520px' }}
+        className="w-full h-full min-h-[520px] bg-[#0b132b]"
+        zoomControl={true}
       >
-        {/* Dark theme map tiles for a premium look */}
+        {/* Unrestricted OpenStreetMap tiles with sleek dark mode filter */}
         <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
-          url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          className="map-tiles-dark"
+          maxZoom={18}
         />
         
         {stadiums.map(stadium => (

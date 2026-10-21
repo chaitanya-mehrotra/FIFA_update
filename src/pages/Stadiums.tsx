@@ -70,7 +70,7 @@ export default function Stadiums() {
   }, [selectedStadium]);
 
   return (
-    <div className="flex flex-col h-[calc(100vh-8rem)] min-h-[800px] w-full">
+    <div className="flex flex-col min-h-[700px] md:h-[calc(100vh-9rem)] w-full">
       <div className="mb-6 shrink-0">
         <h1 className="text-4xl font-bold text-white mb-2 flex items-center">
           <MapPin className="w-8 h-8 mr-3 text-[#C49E59]" />
@@ -94,7 +94,7 @@ export default function Stadiums() {
 
       <div className="flex-1 relative flex flex-col md:flex-row gap-6 pb-6 min-h-0">
         {/* Map Area */}
-        <div className={`transition-all duration-500 ease-in-out h-full ${selectedStadium ? 'w-full md:w-2/3' : 'w-full'}`}>
+        <div className={`transition-all duration-500 ease-in-out h-[550px] md:h-full ${selectedStadium ? 'w-full md:w-2/3' : 'w-full'}`}>
           <StadiumMap 
             stadiums={filteredStadiums}
             selectedStadium={selectedStadium}
